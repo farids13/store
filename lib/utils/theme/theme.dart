@@ -1,42 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:store/utils/theme/custom_theme/elevated_button_theme.dart';
+import 'package:store/utils/theme/custom_theme/text_theme.dart';
 
 class TAppTheme {
+  TAppTheme._();
 
- static ThemeData lightTheme = ThemeData(
+  static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(
-        seedColor: Colors.blue,
-        brightness: Brightness.light
+      seedColor: Colors.blue,
+      brightness: Brightness.light,
     ),
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: const AppBarTheme(
       foregroundColor: Colors.black,
       backgroundColor: Colors.white,
     ),
-    textTheme: const TextTheme(
-      bodyMedium: TextStyle(
-        fontSize: 16.0,
-        color: Colors.black,
-      ),
-    ),
+    textTheme: TTextTheme.lightTextTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
   );
 
- static ThemeData darkTheme = ThemeData(
+  static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(
-        seedColor: Colors.blue,
-        brightness: Brightness.dark
+      seedColor: Colors.red,
+      brightness: Brightness.dark,
     ),
     scaffoldBackgroundColor: Colors.black,
     appBarTheme: const AppBarTheme(
       foregroundColor: Colors.white,
       backgroundColor: Colors.black,
     ),
-    textTheme: const TextTheme(
-      bodyMedium: TextStyle(
-        fontSize: 16.0,
-        color: Colors.white,
-      ),
-    ),
+    textTheme: TTextTheme.darkTextTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
   );
 }
